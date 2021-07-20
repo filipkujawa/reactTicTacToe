@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { calculateWinner } from "../helper";
 import Board from "./Board";
 
+
 const Game = () => {
   const [history, setHistory] = useState([Array(9).fill(null)]);
   const [stepNumber, setStepNumber] = useState(0);
@@ -37,15 +38,22 @@ const Game = () => {
       );
     });
 
+  const refreshPage = ()=>{
+      window.location.reload();
+   } 
+  
   return (
     <>
       <h1>React Tic Tac Toe - With Hooks</h1>
+      
       <Board squares={history[stepNumber]} onClick={handleClick} />
       <div className="info-wrapper">
         <div>
           <h3>History</h3>
+          
           {renderMoves()}
         </div>
+        <button class="restart" onClick={refreshPage}>Restart</button>
         <h3>{winner ? "Winner: " + winner : "Next Player: " + xO}</h3>
       </div>
     </>

@@ -22,8 +22,8 @@ h1 {
 }
 
 .board {
-  border: 1rem solid #ff652f;
-  background: #ff652f;
+  border: 1rem solid #1f9aca;
+  background: #1f9aca;
   width: 500px;
   height: 500px;
   display: grid;
@@ -41,10 +41,10 @@ h1 {
 }
 
 .X {
-  color: red;
+  color: white;
 }
 .O {
-  color: green;
+  color: white;
 }
 
 .info-wrapper {
@@ -68,4 +68,17 @@ li {
   cursor: pointer;
   padding: 0.5rem;
   margin: 0.5rem 1rem;
+}
+
+.restart {
+  background: #272727;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 30%;
+  height: 25%;
+  text-align: center;
+  
 }
